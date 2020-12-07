@@ -3,6 +3,7 @@ public class Range implements IntegerSequence{
   private int start,end,current;
 
   public Range(int first, int last){
+    if (first > last) throw new IllegalArgumentException();
     start = first;
     end = last;
     current = first;
@@ -27,3 +28,4 @@ public class Range implements IntegerSequence{
     }
     throw new NoSuchElementException();
   }
+}
