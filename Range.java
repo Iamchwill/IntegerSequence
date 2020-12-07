@@ -7,4 +7,8 @@ public class Range implements IntegerSequence{
     end = last;
     current = first;
   }
+
+  public void reset() {
+    current = start;
+  }
 }
