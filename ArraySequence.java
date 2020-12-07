@@ -5,6 +5,15 @@ public class ArraySequence implements IntegerSequence{
 
   public ArraySequence(int[] other){
     data = other;
+  }
+
+  public ArraySequence(IntegerSequence otherseq){
+    data = new int[otherseq.length()];
+    currentIndex = 0;
+    while(otherseq.hasNext()){
+      data[currentIndex] = otherseq.next();
+      currentIndex++;
+    }
     currentIndex = 0;
   }
 
