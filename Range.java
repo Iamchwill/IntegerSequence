@@ -17,6 +17,13 @@ public class Range implements IntegerSequence{
   }
 
   public boolean hasNext(){
-    return current < end;
+    return current <= end;
   }
-}
+
+  public int next(){
+    if (hasNext()){
+      current++;
+      return current - 1;
+    }
+    throw new NoSuchElementException();
+  }
