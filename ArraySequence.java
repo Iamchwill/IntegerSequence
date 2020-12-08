@@ -9,6 +9,7 @@ public class ArraySequence implements IntegerSequence{
 
   public ArraySequence(IntegerSequence otherseq){
     data = new int[otherseq.length()];
+    otherseq.reset();
     currentIndex = 0;
     while(otherseq.hasNext()){
       data[currentIndex] = otherseq.next();
