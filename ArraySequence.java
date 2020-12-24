@@ -4,7 +4,10 @@ public class ArraySequence implements IntegerSequence{
   private int[] data;
 
   public ArraySequence(int[] other){
-    data = other;
+    data = new int[other.length];
+    for(int i = 0; i < other.length; i++){
+      data[i] = other[i];
+    }
   }
 
   public ArraySequence(IntegerSequence otherseq){
